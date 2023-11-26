@@ -1,0 +1,9 @@
+title: My Streamlit App
+description: A simple app that shows how to deploy a Streamlit app to the cloud using Streamlit's app.yaml feature.
+theme: dark
+external_links:
+  - href: https://streamlit.io/
+    label: Visit Streamlit's website
+  - href: https://github.com/streamlit/streamlit-app-example
+    label: View the source code
+app_file: app/app.py
