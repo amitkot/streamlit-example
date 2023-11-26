@@ -6,4 +6,4 @@ external_links:
     label: Visit Streamlit's website
   - href: https://github.com/streamlit/streamlit-app-example
     label: View the source code
-app_file: app/app.py
+app_file: app.py
