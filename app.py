@@ -28,7 +28,7 @@ async def async_generator():
 
 # Function to run the async generator and update the output container
 async def run_async_code(output_container):
-    for data in await async_generator():
+    async for data in async_generator():
         output_container.write(data)
 
 
