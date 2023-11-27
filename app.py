@@ -32,6 +32,17 @@ async def run_async_code(output_container):
         output_container.write(data)
 
 
+async def long_async_generator():
+    for i in range(50):
+        await asyncio.sleep(10)
+        yield f"Data piece {i}"
+
+
+async def run_long_async_code(output_container):
+    async for data in long_async_generator():
+        output_container.write(data)
+
+
 # Streamlit app layout
 st.title("Streamlit Async Example")
 
@@ -45,6 +56,10 @@ if st.button("Run Async Generator"):
 
     # Run the async generator and update the container
     asyncio.run(run_async_code(output_container))
+
+if st.button("Run Long Async Generator"):
+    output_container.empty()
+    asyncio.run(run_long_async_code(output_container))
 
 # When the button is clicked
 if st.button("Run Async Function"):
